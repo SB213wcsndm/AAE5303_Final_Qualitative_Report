@@ -42,11 +42,10 @@ To complete the 3 pipelines using the AMtown02 dataset, with the below challenge
 Anyways, we successfully completed.
 
 ### 3.2 Pipeline overview
-Since the dataset (AMtown02) was given by HKU MaRS Lab, we are able to perform 3 pipelines at the same time.  The pipeline for VO mainly follows the instructions and experiences from assignemnt 2.  3DGS was originally planned to use the server providede by TAs, yet it is shut off **JUST BEFORE REPORT DATE**, then we have to complete it locally.  For segmentation, its teamate's specialties that he could complete the task swiftly.
+Since the dataset (AMtown02) was given by HKU MaRS Lab, we are able to perform 3 pipelines at the same time.  The pipeline for VO mainly follows the instructions and experiences from assignemnt 2.  3DGS was originally planned to use the server providede by TAs, yet it is shut off **JUST BEFORE REPORT DATE**, then Yuhao have to complete it locally.  For segmentation, its Bailin's specialties that he could complete the task swiftly.
 
 ### 3.3 My position in the pipeline
-My position is Visual SLAM.
-[3-5 sentences. Explain where your own work sat in the larger system.]
+My position is Visual SLAM.  That I have to ensure the ouput, the python scripts to be exact, can generate the same format as windows user.  In other words, I have to build the same environment as the docker image provided.  Details will be discussed below.
 
 ### 3.4 Reproducibility snapshot
 | Item | Details |
@@ -63,19 +62,19 @@ My position is Visual SLAM.
 
 | Indicator | Before-course (optional) | End-of-course | Main evidence | Main lesson |
 |---|---:|---:|---|---|
-| 1. Tooling & Reproducible Workflow Readiness |  |  |  |  |
-| 2. Prompting Strategy & AI Co-Creation |  |  |  |  |
-| 3. Verification, Documentation & Technical Judgment |  |  |  |  |
-| 4. Debugging, Iteration & Problem Solving |  |  |  |  |
-| 5. Integration & Benchmark-Driven Improvement |  |  |  |  |
-| 6. Responsible AI Use, Reflection & Redesign |  |  |  |  |
+| 1. Tooling & Reproducible Workflow Readiness | 1 | 5 | MacOS | Cursor is not that useful |
+| 2. Prompting Strategy & AI Co-Creation | 3 | 4 |  |  |
+| 3. Verification, Documentation & Technical Judgment | 2 | 4 |  |  |
+| 4. Debugging, Iteration & Problem Solving | 1 | 4 |  |  |
+| 5. Integration & Benchmark-Driven Improvement | 1 | 3 |  |  |
+| 6. Responsible AI Use, Reflection & Redesign | 4 | 5 |  |  |
 
 ---
 
 ## 5. Indicator 1 - Tooling & Reproducible Workflow Readiness
 
-**Before-course confidence (optional):** `__/5`  
-**End-of-course confidence:** `__/5`
+**Before-course confidence (optional):** `1/5`  
+**End-of-course confidence:** `5/5`
 
 ### Situation / task
 [What setup or workflow task is this section about?]
@@ -103,8 +102,8 @@ My position is Visual SLAM.
 
 ## 6. Indicator 2 - Prompting Strategy & AI Co-Creation
 
-**Before-course confidence (optional):** `__/5`  
-**End-of-course confidence:** `__/5`
+**Before-course confidence (optional):** `3/5`  
+**End-of-course confidence:** `4/5`
 
 ### Situation / task
 [What AI-assisted task is this section about?]
@@ -132,8 +131,8 @@ My position is Visual SLAM.
 
 ## 7. Indicator 3 - Verification, Documentation & Technical Judgment
 
-**Before-course confidence (optional):** `__/5`  
-**End-of-course confidence:** `__/5`
+**Before-course confidence (optional):** `2/5`  
+**End-of-course confidence:** `4/5`
 
 ### Situation / task
 [What technical choice, claim, or AI suggestion did you need to verify or judge?]
@@ -161,8 +160,8 @@ My position is Visual SLAM.
 
 ## 8. Indicator 4 - Debugging, Iteration & Problem Solving
 
-**Before-course confidence (optional):** `__/5`  
-**End-of-course confidence:** `__/5`
+**Before-course confidence (optional):** `1/5`  
+**End-of-course confidence:** `4/5`
 
 ### Situation / task
 [What failure case or debugging situation is this section about?]
@@ -190,8 +189,8 @@ My position is Visual SLAM.
 
 ## 9. Indicator 5 - Integration & Benchmark-Driven Improvement
 
-**Before-course confidence (optional):** `__/5`  
-**End-of-course confidence:** `__/5`
+**Before-course confidence (optional):** `1/5`  
+**End-of-course confidence:** `3/5`
 
 ### Situation / task
 [What integration or evaluation task is this section about?]
@@ -220,8 +219,8 @@ My position is Visual SLAM.
 
 ## 10. Indicator 6 - Responsible AI Use, Reflection & Redesign
 
-**Before-course confidence (optional):** `__/5`  
-**End-of-course confidence:** `__/5`
+**Before-course confidence (optional):** `4/5`  
+**End-of-course confidence:** `5/5`
 
 ### Situation / task
 [What AI-related risk, limitation, or reflection point is this section about?]
