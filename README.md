@@ -38,7 +38,7 @@ To complete the 3 pipelines using the AMtown02 dataset, with the below challenge
 1.  Stubborn guy on using ARM Mac (i.e. no bootcamp) for completing visual SLAM.
 2.  TAs had shut down the server **JUST BEFORE REPORT DATE** without prior notification, that computing 3DGS with notebook computers is an issue.
 3.  U-Net have given a complete guide, but without hands-on.
-Anyways, we successfully completed.
+\n Anyways, we successfully completed.
 
 ### 3.2 Pipeline overview
 
