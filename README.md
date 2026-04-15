@@ -6,17 +6,17 @@
 |---|---|
 | Course | AAE5303 |
 | Report type | Individual Report on Six Qualitative Indicators |
-| Student name | [insert] |
-| Student ID | [insert] |
-| Team name / group number | [insert] |
-| Team repo URL | [insert] |
-| My role in the team | [insert] |
-| My primary module | [VSLAM / 3D reconstruction / segmentation / integration / benchmarking / other] |
-| Main dataset / scene used | [insert] |
-| Main tools used | Cursor / Docker / ROS / ORB-SLAM3 / OpenSplat / U-Net / others |
-| Main evidence paths | [insert paths] |
-| Commit hash(es) / issue / notebook / slide links | [insert] |
-| Declared AI use | [insert] |
+| Student name | MAN Chi Lok Louie |
+| Student ID | 25001004G |
+| Team name / group number | 我們組 (WMZ) |
+| Team repo URL | https://github.com/mcllouie/AAE5303_Final-project_--WMZ |
+| My role in the team | Visual SLAM and Coordinator |
+| My primary module | [VSLAM / ~~3D reconstruction / segmentation / integration~~ / benchmarking / other] |
+| Main dataset / scene used | AMtown02 |
+| Main tools used | ~~Cursor / Docker~~ / ROS / ORB-SLAM3 / ~~OpenSplat / U-Net~~ / others |
+| Main evidence paths | https://github.com/mcllouie/AAE5303-Group_Project-WMZ-VO |
+| ~~Commit hash(es) / issue / notebook~~ / slide links | https://mcllouie.github.io/AAE5303-Group_Project-WMZ_Slides/ |
+| Declared AI use | Google Ai Replies and Gemini |
 
 ---
 
