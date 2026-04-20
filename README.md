@@ -83,11 +83,7 @@ My position is Visual SLAM.  That I have to ensure the ouput, the python scripts
 [Describe what you personally configured, ran, organized, or improved.]
 
 ### Evidence
-- Environment / container / setup command:
-- Repo path / script:
-- Screenshot / figure:
-- Commit / issue / note:
-- Reproducibility detail:
+docs/螢幕截圖 2026-03-02 17.08.26.png
 
 ### What this shows
 [Explain what the evidence shows about your readiness and workflow maturity.]
