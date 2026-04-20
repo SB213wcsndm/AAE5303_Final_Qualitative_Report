@@ -63,7 +63,7 @@ My position is Visual SLAM.  That I have to ensure the ouput, the python scripts
 | Indicator | Before-course (optional) | End-of-course | Main evidence | Main lesson |
 |---|---:|---:|---|---|
 | 1. Tooling & Reproducible Workflow Readiness | 1 | 5 | MacOS | Cursor is not that useful |
-| 2. Prompting Strategy & AI Co-Creation | 3 | 4 |  |  |
+| 2. Prompting Strategy & AI Co-Creation | 3 | 4 | Resuced Drifting of IMU | Not to trust Ai can solve 100% of the problems |
 | 3. Verification, Documentation & Technical Judgment | 2 | 4 |  |  |
 | 4. Debugging, Iteration & Problem Solving | 1 | 4 |  |  |
 | 5. Integration & Benchmark-Driven Improvement | 1 | 3 |  |  |
@@ -77,22 +77,23 @@ My position is Visual SLAM.  That I have to ensure the ouput, the python scripts
 **End-of-course confidence:** `5/5`
 
 ### Situation / task
-[What setup or workflow task is this section about?]
+To complete ORB-SLAM3 in Apple Silicon Mac.
 
 ### What I did
-[Describe what you personally configured, ran, organized, or improved.]
+Google Google and Google.  And a bit developer instinct.
 
 ### Evidence
 ![Evidence 1](docs/Evidence1.png)
 
 ### What this shows
-[Explain what the evidence shows about your readiness and workflow maturity.]
+ORB-SLAM3 in Apple Silicon Mac is completely feasible.
 
 ### Limitation
-[What still remains fragile or manual?]
+Cursor is nearly useless since it cannot link to the VM.
+Still can't Google how to run CPU only 3DGS in ARM environment, there are too few resources at the moment.
 
 ### Next improvement
-[One concrete next step.]
+Try Google with Gemnini to solve 3DGS problem.
 
 ---
 
@@ -102,16 +103,39 @@ My position is Visual SLAM.  That I have to ensure the ouput, the python scripts
 **End-of-course confidence:** `4/5`
 
 ### Situation / task
-[What AI-assisted task is this section about?]
+To suggest extrinsic parameter for IMU
 
 ### What I did
-[Describe one prompt that failed or was weak, and how you refined it.]
+Ask Gemini to estimate the extrinsic parameter for IMU
 
 ### Evidence
-- Initial prompt:
+- Initial prompt: IMU drifted towards upward and leftward in ORBSLAM3, refine extrinsic parameter
 - Revised prompt:
 - Added context / file references:
+- Tbc: !!opencv-matrix
+
+   rows: 4
+
+   cols: 4
+
+   dt: f
+
+   data: [ 0.0, -1.0,  0.0, -0.00674,
+
+           0.0,  0.0, -1.0, -0.02840,
+
+           1.0,  0.0,  0.0, -0.09965,
+
+           0.0,  0.0,  0.0,  1.0]
 - Resulting config or code change:
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ -0.008726, -0.999924,  0.008727, -0.00674,
+            0.008727, -0.008726, -0.999924, -0.02840,
+            0.999924,  0.008650,  0.008803, -0.09965,
+            0.0,       0.0,       0.0,       1.0]
 - What the AI still could not solve:
 
 ### What this shows
