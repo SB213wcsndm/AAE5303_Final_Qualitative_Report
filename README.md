@@ -11,7 +11,7 @@
 | Team name / group number | 我們組 (WMZ) |
 | Team repo URL | https://github.com/mcllouie/AAE5303_Final-project_--WMZ |
 | My role in the team | 3D scene reconstruction |
-| My primary module | [~~VSLAM~~ / 3D reconstruction / ~~segmentation / integration~~ / benchmarking / other] |
+| My primary module | [~~VSLAM~~ / 3D reconstruction / ~~segmentation / integration / benchmarking~~ / other] |
 | Main dataset / scene used | AMtown02 |
 | Main tools used | Cursor / Docker / ROS / ~~ORB-SLAM3~~ / OpenSplat / ~~U-Net~~ / others |
 | Main evidence paths | https://github.com/SB213wcsndm/AAE5303_opensplat_demo-.git |
@@ -57,12 +57,12 @@
 
 | Indicator | Before-course (optional) | End-of-course | Main evidence | Main lesson |
 |---|---:|---:|---|---|
-| 1. Tooling & Reproducible Workflow Readiness | 1 | 4 | AMD CPU and WSL2 Ubuntu | Cursor is not that useful |
-| 2. Prompting Strategy & AI Co-Creation | 1 | 4 | Reduced Drifting of IMU | Not to trust Ai can solve 100% of the problems |
-| 3. Verification, Documentation & Technical Judgment | 3 | 4 | PPT is finished | Ai is not that good to point out key point |
-| 4. Debugging, Iteration & Problem Solving | 1 | 4 | Solved CXX problem | Try to learn, not Googling for solution only |
-| 5. Integration & Benchmark-Driven Improvement | 1 | 3 | Scored 92.6 in Leaderboard | There are limitation with different methods |
-| 6. Responsible AI Use, Reflection & Redesign | 2 | 3 | ORB-SLAM3 completion in MacOS, with satisfactory accuracy. |  |
+| 1. Tooling & Reproducible Workflow Readiness | 1 | 4 | AMD CPU and WSL2 Ubuntu | Without a CUDA-capable GPU led to excessively high CPU usage and eventually a system breakdown. |
+| 2. Prompting Strategy & AI Co-Creation | 1 | 4 | Reduced Drifting of IMU | Cursor may modify my files automatically based on its generated outputs. |
+| 3. Verification, Documentation & Technical Judgment | 3 | 4 | PPT is finished | Still exist problems such as consistency with the English expression. |
+| 4. Debugging, Iteration & Problem Solving | 1 | 4 | Solved system lag and crash problem |  |
+| 5. Integration & Benchmark-Driven Improvement | 1 | 3 | Can obtain 3D scene reconstruction result | There are limitation with datasets, training times and parameters |
+| 6. Responsible AI Use, Reflection & Redesign | 2 | 3 |  |  |
 
 ---
 
@@ -134,7 +134,7 @@ colmap sequential_matcher \             --Invoke the sequential matching module 
 Ai do know which parameters need to be adjusted.
 
 ### Limitation
-Ai still not that "super" to solve problems directly
+Ai still not that "super" to solve problems directly, it still needed to adjust after several verifications.
 
 ### Next improvement
 Try use more images, more training times and better pasrameters.
