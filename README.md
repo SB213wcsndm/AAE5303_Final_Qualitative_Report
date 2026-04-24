@@ -26,21 +26,26 @@
 |---|---|
 | Team result | Using the first 20 images of AMtown02 as the dataset |
 | My specific role | 3D scene reconstruction |
-| My strongest evidence |    |
-| My main learning focus |    |
+| My strongest evidence |  Using completely AMD CPU to complete the 3D scene reconstruction  |
+| My main learning focus |  How to build OpenSplat local and generate 3D models from datasets after training  |
 
 ---
 
 ## 3. Project Snapshot
 
 ### 3.1 Project goal
+To complete the 3 pipelines using the AMtown02 dataset, with the below challenges:
 
+1, Using completely MacOS with Apple Silicon to complete the Visual SLAM.
+2, TAs had shut down the server JUST BEFORE REPORT DATE without prior notification, that computing 3DGS with notebook computers without GPU is an issue.
+3, U-Net have given a complete guide, but without hands-on.
+Anyway, we successfully completed.
 
 ### 3.2 Pipeline overview
-
+Since the dataset (AMtown02) was given by HKU MaRS Lab, we are able to perform 3 pipelines at the same time. The pipeline for VO mainly follows the instructions and experiences from assignment 2 by Man Chi Lok Louie. 3DGS was originally planned to use the server provided by TAs, yet it is shut off JUST BEFORE REPORT DATE, so I have to complete it locally. For segmentation, its Bailin's specialties that he could complete the task swiftly.
 
 ### 3.3 My position in the pipeline
-
+My position is 3D scene reconstruction. Because after the server was shut down, I need to build OpenSplat on CPU and finish the 3D scene reconstruction task on a unperfect prarmeters and train situations.
 
 ### 3.4 Reproducibility snapshot
 | Item | Details |
@@ -60,9 +65,9 @@
 | 1. Tooling & Reproducible Workflow Readiness | 1 | 4 | AMD CPU and WSL2 Ubuntu | Without a CUDA-capable GPU led to excessively high CPU usage and eventually a system breakdown. |
 | 2. Prompting Strategy & AI Co-Creation | 1 | 4 | Reduced Drifting of IMU | Cursor may modify my files automatically based on its generated outputs. |
 | 3. Verification, Documentation & Technical Judgment | 3 | 4 | PPT is finished | Still exist problems such as consistency with the English expression. |
-| 4. Debugging, Iteration & Problem Solving | 1 | 4 | Solved system lag and crash problem |  |
-| 5. Integration & Benchmark-Driven Improvement | 1 | 3 | Can obtain 3D scene reconstruction result | There are limitation with datasets, training times and parameters |
-| 6. Responsible AI Use, Reflection & Redesign | 2 | 3 |  |  |
+| 4. Debugging, Iteration & Problem Solving | 1 | 4 | Solved system lag and crash problem | Using a CUDA-capable GPU or Server can improve precision and speed. |
+| 5. Integration & Benchmark-Driven Improvement | 1 | 3 | Can obtain 3D scene reconstruction result | There are limitation with datasets, training times and parameters. |
+| 6. Responsible AI Use, Reflection & Redesign | 2 | 3 | 3D scene reconstruction completed in AMD CPU and the reduce of losses by OpenSplat is proved | Cursor may led to error parameters or modify my files automatically based on its generated outputs. |
 
 ---
 
@@ -174,22 +179,22 @@ It should be review or rewritten by myself.
 **End-of-course confidence:** `4/5`
 
 ### Situation / task
-To solve ORB-SLAM3 cannot be build in the system with "CXX" error
+Solved system lag and crash problem
 
 ### What I did
-Since I self-learned coding, though I knew what is "C++", but ner come accross the term "CXX".  After Googling for days, I realised CXX is C++ indeed.
+By referring to the official OpenSplat open-source tutorials, I learned how to build OpenSplat for CPU-only operation. Meanwhile, I consulted Cursor and obtained optimized commands that reduced inter-image matching parameters to accelerate runtime performance on the CPU.
 
 ### Evidence
-Solved the CXX (alright C++...) error due to compatibility issue.
+Solved system lag and crash problem caused by equmipment limitation.
 
 ### What this shows
-Self-learning is much more impactful than spoon fed.
+Excessively high CPU usage when feature extraction or feature matching will cause system lag and crash.
 
 ### Limitation
-I am lucky to found the solution in Stack Overflow (as I remember), if no previous "masters", I will be stuck.
+Mainly equipment limitation, my notebook computer limit the parameter setting, training times and dataset decision.
 
 ### Next improvement
-Maybe try to learn about Linux system rather than Googling for solution.
+Maybe using a CUDA-capable GPU or Server can improve precision and speed.
 
 ---
 
@@ -200,22 +205,23 @@ Maybe try to learn about Linux system rather than Googling for solution.
 **End-of-course confidence:** `3/5`
 
 ### Situation / task
-To achieve a score of 90 or above in Leaderboard.
+To achieve a reduction of losses after several times training.
 
 ### What I did
-To increase the no. of features to 15,000.
+Set the times of training to 30 and each 10 times save a intermediate result, and then evaluate these results.
 
 ### Evidence
-Since I can't overly increase the threshold for accuracy, that will impact the completeness, I opt for increasing the features for overflowing "references" for SLAM.
+<img width="2076" height="1477" alt="convergence_analysis" src="https://github.com/user-attachments/assets/f7898778-41d0-4169-9aea-35289023e6f7" />
+
 
 ### What this shows
-Increase the no. of features to crazily high do help.
+The feature loss decreased by 36.7% after 30 training rounds, dropping from the initial value of 0.2798 to 0.1772. This verified that the reconstruction performance achieved a substantial improvement in this scenario. 
 
 ### Limitation
-Still cannot solve the first part of the flight, that stationary (no movement) cannot perform VO.
+The equipment limitation makes me set only 30 times training.
 
 ### Next improvement
-To integrate IMU.
+Improve training times to have a more intuitive result.
 
 ---
 
@@ -225,10 +231,10 @@ To integrate IMU.
 **End-of-course confidence:** `3/5`
 
 ### Situation / task
-ORB-SLAM3 environment construction and parameters improvement.
+3D scene reconstruction parameters improvement.
 
 ### What I did
-Googling in most part of the project, Gemini at the last part (when it available in Hong Kong)
+Googling in most part of the project, Gemini at the last part.
 
 ### Evidence
 ORB-SLAM3 completion in MacOS, with satisfactory accuracy.
