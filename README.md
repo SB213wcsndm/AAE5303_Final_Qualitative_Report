@@ -237,7 +237,7 @@ Improve training times to have a more intuitive result.
 Googling in most part of the project, Gemini at the last part.
 
 ### Evidence
-ORB-SLAM3 completion in MacOS, with satisfactory accuracy.
+3D scene reconstruction completied in AMD CPU, with satisfactory losses reduction.
 
 ### What this shows
 Though it seemingly hard in first glance, but with Ai and personal hard work, it still could be solved.
@@ -253,18 +253,22 @@ Ai is based on previous experience in coding, still can't really generate "new" 
 ---
 
 ## 11. Overall Growth Summary
-This course has been a transformative journey in shifting from a "consumer" of technical workflows to an "architect" of custom engineering solutions. My development is best characterized by the transition from following pre-defined paths to successfully implementing ORB-SLAM3 on an Apple Silicon (M1 Pro) environment via UTM, a feat that required significant technical judgment and deviation from the standard course materials provided for Windows/Docker.
+Before taking this course, I had already learned how to use ROS1 Noetic, but I had no prior experience with Docker or Cursor for development. During Assignment 1, I started using Cursor to help troubleshoot and resolve technical errors. For Assignment 2, I pulled Docker images and configured proper docker run commands with Cursor’s guidance to complete the project tasks.
 
-The six indicators collectively highlight a significant maturation in my AI-assisted engineering capabilities. Initially, I viewed AI and search engines as "magic boxes" for quick fixes. However, through the process of debugging obscure CXX errors and attempting to refine IMU extrinsic parameters, I learned that AI is a co-pilot rather than a pilot. My experience with Gemini showed that while AI can intelligently suggest parameter tweaks, it lacks the physical intuition of a drone’s CAD constraints unless guided by precise, contextual prompting.
+My most significant progress lies in my in-depth understanding of the entire 3D scene reconstruction workflow. I have gained a clear grasp of how each step connects as a complete pipeline, including building the OpenSplat development environment, importing training datasets, feature extraction, feature matching, pose generation, and 3D scene reconstruction. Furthermore, I am now able to comprehend the specific functions and implications of relevant parameters and commands throughout the process, and adjust them appropriately according to actual project requirements.
 
-My personal contribution to the team, "我們組 (WMZ)," went beyond mere Visual SLAM execution; I acted as a bridge between high-level AI suggestions and low-level system compatibility. Reaching a 92.6 score on the leaderboard by aggressively scaling features to 15,000 proved my ability to iterate based on benchmark data. Ultimately, this project taught me that "responsible AI use" means using these tools to accelerate the learning curve of complex systems like ROS and Ubuntu, while relying on personal "developer instinct" to verify and integrate the results into a functional, reproducible pipeline. I now feel confident in navigating the "ARM-based" future of robotics development, armed with better technical judgment and a more skeptical, yet effective, prompting strategy.
+The application of artificial intelligence has greatly facilitated my study. Cursor is highly effective in helping me troubleshoot errors and provide guidance for the next step, enabling me to fully understand the causes and outcomes of each operation. It has significantly assisted me in completing all assignments and projects.
+
+On the other hand, I found that Cursor’s AI Agent will modify my files automatically based on its generated outputs, including files in the workspace. For instance, during the training initialization phase of the 3D scene reconstruction project, the Agent arbitrarily altered the required pose .bin file in the workspace. This mismatch between the actual images and the modified pose .bin file prevented the training process from starting successfully. This abnormal issue was only resolved after I deleted and reconstructed the relevant files and datasets.
+
+If I were to redo this project, I would first figure out the exact meaning of each operational step before allowing AI to intervene in specific tasks. Meanwhile, I would isolate workspace files in advance, so that I can collaborate with AI to troubleshoot errors encountered in the project more reliably.
 
 ---
 
 ## 12. GenAI Use Declaration
 
 During this course, I used the following AI tools: Google Ai Reply and Gemini.  
-They were used for [environment setup / debugging / prompt-based code assistance / ~~language polishing / translation / none~~].  
+They were used for [environment setup / debugging / prompt-based code assistance / language polishing / translation ].  
 All AI-assisted outputs included in this report were checked by me and verified against project requirements, documentation, or experimental evidence before being included.
 
 ---
@@ -272,13 +276,11 @@ All AI-assisted outputs included in this report were checked by me and verified 
 ## 13. References
 
 1. AAE5303 Course Materials
-2. https://github.com/weisongwen/AAE5306_2025-26S1/issues/10
-3. https://github.com/weisongwen/AAE5306_2025-26S1/issues/30
-4. https://vocus.cc/article/66864d4afd897800018adaad
-5. https://github.com/egdw/ORB_SLAM3_Ubuntu20.04
-6. https://wiki.ros.org/noetic/Installation/Ubuntu
+2. https://github.com/Qian9921/AAE5303_opensplat_demo-
+3. https://github.com/pierotofy/OpenSplat
+4. https://github.com/sijieaaa/UAVScenes
 ---
 
 ## 14. Appendix (optional)
 
-### I am tool lazy to do optional stuff :-)
+Null
