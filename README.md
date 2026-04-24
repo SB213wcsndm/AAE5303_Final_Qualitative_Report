@@ -79,18 +79,16 @@ To complete 3D scene reconstruction in AMD CPU.
 Follow and verify the operation procedure from the course materials and Cursor.
 
 ### Evidence
-![Uploading 13e04b649c16ba9d2b9901259ae16164.png…]()
-
+<img width="1908" height="894" alt="13e04b649c16ba9d2b9901259ae16164" src="https://github.com/user-attachments/assets/6cfbe43f-e6ce-4479-938d-e23ec5651c49" />
 
 ### What this shows
 3D scene reconstruction in AMD CPU is completely feasible.
 
 ### Limitation
-Cursor is nearly useless since it cannot link to the VM.
-Still can't Google how to run CPU only 3DGS in ARM environment, there are too few resources at the moment.
+Since my device is equipped with an AMD CPU and does not have a CUDA-architecture GPU, directly executing the command provided by Cursor will result in excessively high CPU usage and cause a crash.
 
 ### Next improvement
-Try Google with Gemini to solve 3DGS problem.
+Use commands that reduce the matching parameters between images to improve running speed under CPU operation.
 
 ---
 
@@ -101,40 +99,39 @@ Try Google with Gemini to solve 3DGS problem.
 **End-of-course confidence:** `4/5`
 
 ### Situation / task
-To suggest extrinsic parameter for IMU
+To suggest key parameters for feature extraction and feature matching for pose generation.
 
 ### What I did
-Ask Gemini to estimate the extrinsic parameter for IMU
+Ask Cursor to provide the key parameters for pose generation then verify and aadjust it on my computer.
 
 ### Evidence
-- Initial prompt: IMU drifted towards upward and leftward in ORBSLAM3, refine extrinsic parameter
-- Revised prompt: It drifted more vigorously, re estimate / Stilll drifting left, re estimate
-- Added context / file references: Attached the HKU MaRS link for Gemini to know the drone CAD's file
-```bash
-Tbc: !!opencv-matrix
-   rows: 4
-   cols: 4
-   dt: f
-   data: [ 0.0, -1.0,  0.0, -0.00674,
-           0.0,  0.0, -1.0, -0.02840,
-           1.0,  0.0,  0.0, -0.09965,
-           0.0,  0.0,  0.0,  1.0]
+
 ```
 - Resulting config or code change:
 ```bash
-Tbc: !!opencv-matrix
-   rows: 4
-   cols: 4
-   dt: f
-   data: [ -0.008726, -0.999924,  0.008727, -0.00674,
-            0.008727, -0.008726, -0.999924, -0.02840,
-            0.999924,  0.008650,  0.008803, -0.09965,
-            0.0,       0.0,       0.0,       1.0]
+Feature Extraction:
+colmap feature_extractor \             --Invoke the feature_extractor command of COLMAP. 
+  --database_path database.db \
+  --image_path images \
+  --ImageReader.single_camera 1 \              --The same camera intrinsic model 
+  --SiftExtraction.use_gpu 0 \                 --Disable GPU and use CPU only
+  --SiftExtraction.max_image_size 1000 \       --Limit the long side of images to a maximum of 1000 pixels
+  --SiftExtraction.max_num_features 1024 \     --Retain a maximum of 1024 feature points per image
+  --SiftExtraction.num_threads 2               --Only use 2 CPU threads
+
+Feature Matching
+colmap sequential_matcher \             --Invoke the sequential matching module of COLMAP，instead of exhaustive_matcher for a rapid result 
+  --database_path database.db \
+  --SiftMatching.use_gpu 0 \                --Disable GPU and use CPU only
+  --SequentialMatching.overlap 15 \         --Up to approximately 15 preceding and subsequent frames
+  --SiftMatching.max_num_matches 16384 \    --A maximum of 16384 matching points will be retained
+  --SiftMatching.num_threads 2              --Only use 2 CPU threads
+
 ```
 - What the AI still could not solve: Stil Drift.
 
 ### What this shows
-Ai do know which parameters to tweak
+Ai do know which parameters need to be adjusted.
 
 ### Limitation
 Ai still not that "super" to solve problems directly
