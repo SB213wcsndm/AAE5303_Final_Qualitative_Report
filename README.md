@@ -234,7 +234,7 @@ Improve training times to have a more intuitive result.
 3D scene reconstruction parameters improvement.
 
 ### What I did
-Googling in most part of the project, Gemini at the last part.
+Working together with Cursor Agent to finish the project.
 
 ### Evidence
 3D scene reconstruction completied in AMD CPU, with satisfactory losses reduction.
@@ -243,12 +243,10 @@ Googling in most part of the project, Gemini at the last part.
 Though it seemingly hard in first glance, but with Ai and personal hard work, it still could be solved.
 
 ### Limitation
-Ai is based on previous experience in coding, still can't really generate "new" code.  In other words, those solution are stacking from various sharing from the internet, but not it really generate something new.
+When modifying feature extraction and feature matching parameters, AI is based on my previous asking question instead of the real situation of my computer. So the new parameters feedback may not useful but needed to be adjusted.
 
 ### Next improvement
-1. To provide more precise prompt.
-2. To learn rather than 100% rely on Ai, that I could proof-read.
-3. To solve myself and ask Ai to check my design.
+Try different parameters and compare the result caused by them.
 
 ---
 
